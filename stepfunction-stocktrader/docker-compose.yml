@@ -1,0 +1,26 @@
+version: "3.9"
+services:
+  stepfunction:
+    image: amazon/aws-stepfunctions-local:latest
+    container_name: stepfunction-local
+    ports:
+      - "8083:8083"
+    environment:
+      - AWS_DEFAULT_REGION=us-east-1
+      - AWS_ACCESS_KEY_ID=YOUR_AWS_ACCESS_KEY
+      - AWS_SECRET_ACCESS_KEY=YOUR_AWS_SECRET_KEY
+      - LAMBDA_ENDPOINT=http://host.docker.internal:3001/
+      - DYNAMODB_ENDPOINT=http://dynamodb-local:8000/
+    links:
+      - dynamodb-local
+    depends_on:
+      - dynamodb-local
+  dynamodb-local:
+    command: "-jar DynamoDBLocal.jar -sharedDb -optimizeDbBeforeStartup -dbPath ./data"
+    image: "amazon/dynamodb-local:latest"
+    container_name: dynamodb-local
+    ports:
+      - "8000:8000"
+    volumes:
+      - "./docker/dynamodb:/home/dynamodblocal/data"
+    working_dir: /home/dynamodblocal
