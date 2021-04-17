@@ -17,13 +17,15 @@ cd aws-sam-local-samples
    - [AWS SAM CLI](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-cli-install.html)
    - [Docker](https://docs.docker.com/get-docker/)
 
-3. Change to the sample and setup
+3. Setup the application
 
 ```bash
 # example: stepfunction-stocktrader
 cd stepfunction-stocktrader
 make setup
 ```
+
+![make-setup](https://user-images.githubusercontent.com/6315911/115114424-57dfed00-9f5d-11eb-9a85-987f4fd1d63f.gif)
 
 5. View logs to observe the usage of the application (new terminal)
 
@@ -33,13 +35,17 @@ cd stepfunction-stocktrader
 make logs
 ```
 
-6. Open a new terminal and run a command to use the application (new terminal)
+![make-logs](https://user-images.githubusercontent.com/6315911/115114606-421ef780-9f5e-11eb-9be9-7ce685ce937e.gif)
+
+6. Open a new terminal and run a command to run the application (new terminal)
 
 ```bash
 # example: stepfunction-stocktrader
 cd stepfunction-stockrader
 make run
 ```
+
+![make-run](https://user-images.githubusercontent.com/6315911/115114526-dfc5f700-9f5d-11eb-8903-aa854960e1ae.gif)
 
 7. Cleanup after the application
 
@@ -50,6 +56,8 @@ _Note: Stop the commands running `make setup` and `make logs` first_
 cd stepfunction-stockrader
 make teardown
 ```
+
+![make-teardown](https://user-images.githubusercontent.com/6315911/115114578-1c91ee00-9f5e-11eb-8df7-ca9db6cba266.gif)
 
 ## Resources
 
