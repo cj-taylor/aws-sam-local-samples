@@ -1,0 +1,4 @@
+.aws-sam
+*local.asl.json
+*local.json
+docker/
