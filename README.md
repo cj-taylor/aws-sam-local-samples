@@ -2,6 +2,11 @@
 
 This codebase goes through various AWS Serverless Application Model sample applications to configure them for full local development.
 
+## Examples
+
+- [quickstart-hello-world](./hello-world/)
+- [quickstart-stepfunction-stocktrader](./stepfunction-stocktrader/)
+
 ## Getting Started
 
 1. Clone the repo
